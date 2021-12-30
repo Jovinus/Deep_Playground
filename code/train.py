@@ -18,7 +18,7 @@ class CNN_Modeling(pl.LightningModule):
     def __init__(self) -> None:
         super().__init__()
         self.loss = nn.NLLLoss()
-        self.softmax = nn.LogSoftmax(dim=1)
+        self.softmax = nn.LogSoftmax()
         self.accuracy = Accuracy()
         self.model = CNN_FC_layer(output_class=62)
         
